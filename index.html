@@ -6,64 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>take notes</title>
     <link rel="stylesheet" href="./src/output.css ">
+    <link rel="icon" type="image/x-icon" href="/images/images.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="/images/favicon1.ico">
+    <script src="index.js" type="module" defer></script>
 </head>
 
-<body class="box-border">
-    <div class="max-h-screen p-2 py-4">
+<body id="body" class="box-border">
+    <div id="sidebar" class="max-h-screen p-2 py-4 flex flex-row gap-2.5">
 
         <!-- sidebar -->
-        <div class="note-sidebar w-[25%] min-h-screen rounded-2xl  bg-amber-300 ">
-           
+        <div class="note-sidebar w-[25%] min-h-screen rounded-2xl  bg-[#9ca3af]/10 ">
+
             <div class="flex flex-col items-center">
-                <button type=""
-                class="mt-2 text-center hover:-translate-y-0.5 hover:shadow-[0_10px_30px] hover:shadow-accent-glow duration-300 ease-out box-border w-9/10 text-white font-bold text-[1rem] leading-[1.2] rounded-2xl p-4 bg-[#009578]">
-                Add Notes
-            </button>
+                <a type="" id="add-note" href="/view/newnote.html"
+                    class=" mt-2 text-center hover:-translate-y-0.5 hover:shadow-[0_10px_30px] hover:shadow-accent-glow duration-300 ease-out box-border w-95/100 text-white font-bold text-[1rem] leading-[1.2] rounded-2xl p-4 bg-[#009578]">
+                    Add Notes
+                </a>
             </div>
 
-            <div class="mt-4 px-2">
-                <div class="flex flex-col gap-8 ">
+            <!-- <div class="mt-4 px-2"></div> -->
+            <div class="flex flex-col items-center mt-4 px-2">
+                <div class="flex flex-col items-center justify-center gap-4  ">
                     <div
-                        class="hover:shadow-black/20 hover:shadow-[0px_10px_30px] hover:translate-x-2.5 hover:bg-[rgba(118,169,250,0.1)] duration-300 ease-out p-6 border border-glass-bg border-l-4 border-l-accent-blue rounded-[20px] bg-[#9ca3af] ">
+                        class="w-95/100 hover:shadow-black/20 hover:shadow-[0px_10px_30px] hover:translate-x-2.5 hover:bg-[rgba(118,169,250,0.1)] duration-300 ease-out p-6 border border-glass-bg border-l-4 border-l-accent-blue rounded-[20px] bg-[#9ca3af]/40 ">
                         <h5 class="mb-2 text-[1.2rem] font-bold ">Frontend Excellence</h5>
-                        <p class="text-[0.95rem] text-white/80">Modern JavaScript frameworks, responsive design, and
-                            pixel-perfect implementations</p>
-                        <div class="mt-4 h-1.5 bg-[#ffffff1a] rounded-sm">
-                            <div class="h-1.5 w-[95%] rounded-sm bg-linear-to-r from-accent-blue to-accent-darkblue">
-                            </div>
-                        </div>
+                        <p class="text-[0.95rem] text-black">Modern JavaScript frameworks, responsive design, and
+                            pixel-perfect implementations
+                        </p>
+
                     </div>
                     <div
-                        class="hover:shadow-black/20 hover:shadow-[0px_10px_30px] hover:translate-x-2.5 hover:bg-[rgba(118,169,250,0.1)] duration-300 ease-out p-6  border border-glass-bg border-l-4 border-l-accent-blue rounded-[20px] bg-glass-bg ">
-                        <h5 class="mb-2 text-[1.2rem] font-bold ">Creative Design</h5>
-                        <p class="text-[0.95rem] text-white/80">User-centered design thinking with a focus on
-                            accessibility and visual appeal</p>
-                        <div class="mt-4 h-1.5 bg-[#ffffff1a] rounded-sm">
-                            <div class="h-1.5 w-[90%] rounded-sm bg-linear-to-r from-accent-blue to-accent-darkblue">
-                            </div>
-                        </div>
+                        class="w-95/100 hover:shadow-black/20 hover:shadow-[0px_10px_30px] hover:translate-x-2.5 hover:bg-[rgba(118,169,250,0.1)] duration-300 ease-out p-6 border border-glass-bg border-l-4 border-l-accent-blue rounded-[20px] bg-[#9ca3af]/40 ">
+                        <h5 class="mb-2 text-[1.2rem] font-bold ">Frontend Excellence</h5>
+                        <p class="text-[0.95rem] text-black">Modern JavaScript frameworks, responsive design, and
+                            pixel-perfect implementations
+                        </p>
+
                     </div>
                     <div
-                        class="hover:shadow-black/20 hover:shadow-[0px_10px_30px] hover:translate-x-2.5 hover:bg-[rgba(118,169,250,0.1)] duration-300 ease-out p-6  border border-glass-bg border-l-4 border-l-accent-blue rounded-[20px] bg-glass-bg ">
-                        <h5 class="mb-2 text-[1.2rem] font-bold ">Full-Stack Development</h5>
-                        <p class="text-[0.95rem] text-white/80">End-to-end application development from database to
-                            deployment</p>
-                        <div class="mt-4 h-1.5 bg-[#ffffff1a] rounded-sm">
-                            <div class="h-1.5 w-[85%] rounded-sm bg-linear-to-r from-accent-blue to-accent-darkblue">
-                            </div>
-                        </div>
+                        class="w-95/100 hover:shadow-black/20 hover:shadow-[0px_10px_30px] hover:translate-x-2.5 hover:bg-[rgba(118,169,250,0.1)] duration-300 ease-out p-6 border border-glass-bg border-l-4 border-l-accent-blue rounded-[20px] bg-[#9ca3af]/40 ">
+                        <h5 class="mb-2 text-[1.2rem] font-bold ">Frontend Excellence</h5>
+                        <p class="text-[0.95rem] text-black">Modern JavaScript frameworks, responsive design, and
+                            pixel-perfect implementations
+                        </p>
+
                     </div>
                     <div
-                        class=" hover:shadow-black/20 hover:shadow-[0px_10px_30px] hover:translate-x-2.5 hover:bg-[rgba(118,169,250,0.1)] duration-300 ease-out p-6  border border-glass-bg border-l-4 border-l-accent-blue rounded-[20px] bg-glass-bg ">
-                        <h5 class="mb-2 text-[1.2rem] font-bold ">Performance & Optimization</h5>
-                        <p class="text-[0.95rem] text-white/80">Lightning-fast load times and seamless user experiences
-                            across all devices</p>
-                        <div class="mt-4 h-1.5 bg-[#ffffff1a] rounded-sm">
-                            <div class="h-1.5 w-[92%] rounded-sm bg-linear-to-r from-accent-blue to-accent-darkblue">
-                            </div>
-                        </div>
+                        class="w-95/100 hover:shadow-black/20 hover:shadow-[0px_10px_30px] hover:translate-x-2.5 hover:bg-[rgba(118,169,250,0.1)] duration-300 ease-out p-6 border border-glass-bg border-l-4 border-l-accent-blue rounded-[20px] bg-[#9ca3af]/40 ">
+                        <h5 class="mb-2 text-[1.2rem] font-bold ">Frontend Excellence</h5>
+                        <p class="text-[0.95rem] text-black">Modern JavaScript frameworks, responsive design, and
+                            pixel-perfect implementations
+                        </p>
+
                     </div>
 
                 </div>
@@ -74,10 +68,28 @@
 
 
         <!-- note-preview  -->
-        <div id=" note-preview" class="w-[75%]">
 
+        <div id="note-preview-content" class=" w-[75%]  flex flex-col items-center justify-center gap-4  ">
+            <div type="" class=" mt-2 min-h-25 text-left w-95/100 text-white font-bold text-[2.5rem] leading-[1.2]
+                rounded-2xl p-4 bg-[#009578]">
+                Add Notes
+            </div>
+            <div
+                class="w-95/100  min-h-200 p-6 border border-glass-bg border-l-4 border-l-accent-blue rounded-[20px] bg-[#9ca3af] ">
+                <h5 class="mb-2 text-[1.2rem] font-bold ">Frontend Excellence</h5>
+                <p class="text-[0.95rem] text-black">Modern JavaScript frameworks, responsive design, and
+                    pixel-perfect implementations
+                </p>
+            </div>
         </div>
+
+
+
+
     </div>
+    </div>
+
+
 </body>
 
 </html>
