@@ -2,7 +2,19 @@ const add_note = document.querySelector("#add-note");
 const note_preview_content = document.querySelector("#note-preview-content");
 const form = document.querySelector("form");
 const note_container = document.querySelector("#note-container");
+const dlt_button = document.querySelector("#dlt-btn");
 
+dlt_button.addEventListener("click", () => {
+    let Prev_title = document.querySelector("#title-text").innerHTML;
+    let Prev_description = document.querySelector("#description-text").innerHTML;
+
+    let title = localStorage.getItem("day65");
+    let txt = Prev_description.innerHTML;
+
+    console.log(localStorage.removeItem(Prev_title));
+
+
+})
 
 note_container.innerHTML = '';
 let key = localStorage.key(0);
@@ -62,7 +74,7 @@ note_container.addEventListener("click", (ev) => {
 
     let title = h5.innerHTML;
     let description = p.innerHTML;
-    console.log(description)
+    // console.log(description)
 
     let Prev_title = document.querySelector("#title-text");
     let Prev_description = document.querySelector("#description-text");
