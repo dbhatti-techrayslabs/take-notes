@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="./src/output.css ">
     <link rel="icon" type="image/x-icon" href="/images/images.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <script src="index.js" type="module" defer></script>
-    <script src="/controller/crudRoutes.js" type="module" defer></script>
-    <!-- <script type="module" src="./routes/getNewForm.js" defer></script> -->
 </head>
 
 <body id="body" class="box-border h-screen">
@@ -29,7 +26,7 @@
             <!-- <div class="mt-4 px-2"></div> -->
             <div class="overflow-y-auto max-w-screen  relative flex flex-col items-center mt-4 px-2">
                 <div id="note-container" class=" max-w-full w-full  flex flex-col flex-wrap items-center justify-center gap-4 shrink ">
-                    <div  id="card"
+                    <!-- <div  id="card"
                         class=" truncate min-w-0 w-95/100 hover:shadow-black/20 hover:shadow-[0px_10px_30px] hover:translate-x-2.5 hover:bg-[rgba(118,169,250,0.1)] duration-300 ease-out p-6 border border-glass-bg border-l-4 border-l-accent-blue rounded-[20px] bg-[#9ca3af]/40 ">
                         <h5 class="mb-2 text-[1.2rem] font-bold ">Frontend Excellence</h5>
                         <p class="text-[0.95rem] text-black">Modern JavaScript frameworks, responsive design, and
@@ -60,7 +57,7 @@
                             pixel-perfect implementations
                         </p>
 
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -72,16 +69,13 @@
         <!-- note-preview  -->
 
         <div id="note-preview-content" class=" w-[75%]  flex flex-col items-center justify-center gap-4  ">
-            <div type="" class=" mt-2 min-h-25 flex items-center text-left w-95/100 text-white font-bold text-[2.5rem] leading-[1.2]
+            <div type="" id="title-text" class=" mt-2 min-h-25 flex items-center text-left w-95/100 text-white font-bold text-[2.5rem] leading-[1.2]
                 rounded-2xl p-4 bg-[#009578]">
                 Add Notes
             </div>
-            <div
+            <div id="description-text"
                 class="w-95/100  min-h-200 p-6 border border-glass-bg border-l-4 border-l-accent-blue rounded-[20px] bg-[#9ca3af] ">
-                <h5 class="mb-2 text-[1.2rem] font-bold ">Frontend Excellence</h5>
-                <p class="text-[0.95rem] text-black">Modern JavaScript frameworks, responsive design, and
-                    pixel-perfect implementations
-                </p>
+
             </div>
         </div>
 
@@ -91,7 +85,7 @@
     </div>
     </div>
 
-
+    <script src="index.js" type="module" defer></script>
 </body>
 
 </html>
