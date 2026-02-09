@@ -8,12 +8,13 @@ dlt_button.addEventListener("click", () => {
     let Prev_title = document.querySelector("#title-text").innerHTML;
     let Prev_description = document.querySelector("#description-text").innerHTML;
 
-    let title = localStorage.getItem("day65");
     let txt = Prev_description.innerHTML;
 
-    console.log(localStorage.removeItem(Prev_title));
-
-
+    if (Prev_title.trim() == "Note Title") {
+        alert("choose the valid note to delete")
+    } else {
+        console.log(`note is deleted from the storage`);  
+    }
 })
 
 note_container.innerHTML = '';
