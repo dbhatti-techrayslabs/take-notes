@@ -1,18 +1,18 @@
-const add_note = document.querySelector("#add-note");
-const note_container = document.querySelector("#note-container");
-const dlt_button = document.querySelector("#dlt-btn");
-const upd_button = document.querySelector("#upd-btn");
-const sidebar = document.querySelector("#sidebar");
-const note_prev_content = document.querySelector("#note-preview-content");
+const add_note = document.querySelector("#add-note") as HTMLAnchorElement;
+const note_container = document.querySelector("#note-container") as HTMLDivElement;
+const dlt_button = document.querySelector("#dlt-btn") as HTMLButtonElement;
+const upd_button = document.querySelector("#upd-btn") as HTMLButtonElement;
+const sidebar = document.querySelector("#sidebar") as HTMLDivElement;
+const note_prev_content = document.querySelector("#note-preview-content") as HTMLDivElement;
 
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", ():void => {
     updateList();
 });
 
-const updateList = () => {
+const updateList = ():void => {
 
-    note_container.innerHTML = '';
+    note_container.innerHTML  = '';
 
     for (let i = 0; i < localStorage.length; i++) {
         let title = localStorage.key(i);
