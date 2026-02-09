@@ -19,7 +19,7 @@
             <div class="flex flex-col items-center">
                 <a type="" id="add-note" href="/view/newnote.html"
                     class=" mt-2 text-center hover:-translate-y-0.5 hover:shadow-[0_10px_30px] hover:shadow-accent-glow duration-300 ease-out box-border w-95/100 text-white font-bold text-[1rem] leading-[1.2] rounded-2xl p-4 bg-[#009578]">
-                   <b class="text-[20px]">+</b> Add Notes
+                    <b class="text-[20px]">+</b> Add Notes
                 </a>
             </div>
 
@@ -72,9 +72,15 @@
         <div id="note-preview-content" class=" w-[75%]  flex flex-col items-center justify-center gap-4  ">
             <div class=" mt-2 min-h-25 flex items-center justify-between w-95/100 text-white   
                 rounded-2xl p-4 bg-[#009578]/80">
-                <div id="title-text" class="font-bold text-shadow-black text-shadow-2xs text-left text-[2.5rem] leading-[1.2]"> Note Title</div>
-                <button id="dlt-btn"
-                    class="max-w-50 shrink mt-2 text-center hover:-translate-y-0.5 shadow shadow-transparent border border-[#ffffff45] hover:shadow-[0_10px_30px] hover:shadow-accent-glow duration-300 ease-out box-border w-95/100 text-white font-bold text-[1rem]  rounded-2xl p-4 bg-[#009578]">Delete</button>
+                <div id="title-text"
+                    class="font-bold text-shadow-black text-shadow-2xs text-left text-[2.5rem] leading-[1.2]"> Note
+                    Title</div>
+                <div class="flex flex-row justify-between max-w-150">
+                    <button id="upd-btn"
+                        class="max-w-50 shrink mt-2 text-center hover:-translate-y-0.5 shadow shadow-transparent border border-[#ffffff45] hover:shadow-[0_10px_30px] hover:shadow-accent-glow duration-300 ease-out box-border w-95/100 text-white font-bold text-[1rem]  rounded-2xl p-4 bg-[#009578]">Update</button>
+                    <button id="dlt-btn"
+                        class="max-w-50 shrink mt-2 text-center hover:-translate-y-0.5 shadow shadow-transparent border border-[#ffffff45] hover:shadow-[0_10px_30px] hover:shadow-accent-glow duration-300 ease-out box-border w-95/100 text-white font-bold text-[1rem]  rounded-2xl p-4 bg-rose-500/70">Delete</button>
+                </div>
             </div>
             <div id="description-text"
                 class="w-95/100 text-2xl min-h-200 p-6 border border-glass-bg border-l-4 border-l-accent-blue rounded-[20px] bg-[#9ca3af]/40 ">
