@@ -1,7 +1,5 @@
-const add_note = document.querySelector("#add-note") as HTMLAnchorElement;
 const note_preview_content = document.querySelector("#note-preview-content") as HTMLDivElement;
 const form = document.querySelector("form") as ( HTMLFormElement ) || null;
-const note_container = document.querySelector("#note-container") as HTMLDivElement;
 
 
 

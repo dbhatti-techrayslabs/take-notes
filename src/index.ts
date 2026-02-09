@@ -6,16 +6,19 @@ const sidebar = document.querySelector("#sidebar") as HTMLDivElement;
 const note_prev_content = document.querySelector("#note-preview-content") as HTMLDivElement;
 
 
-document.addEventListener("DOMContentLoaded", ():void => {
+document.addEventListener("DOMContentLoaded", (): void => {
     updateList();
 });
 
-const updateList = ():void => {
+const updateList = (): void => {
 
-    note_container.innerHTML  = '';
+    note_container.innerHTML = '';
 
     for (let i = 0; i < localStorage.length; i++) {
-        let title = localStorage.key(i);
+        let title: string | null = localStorage.key(i);
+        if (title == null) {
+            return
+        }
         let description = localStorage.getItem(title);
 
         let nList = document.createElement("div");
@@ -31,8 +34,8 @@ const updateList = ():void => {
 
 upd_button.addEventListener("click", () => {
 
-    let Prev_title = document.querySelector("#title-text").innerHTML;
-    let Prev_description = document.querySelector("#description-text").innerHTML;
+    let Prev_title = document.querySelector("#title-text") as HTMLDivElement;
+    let Prev_description = document.querySelector("#description-text") as HTMLDivElement;
 
     // console.log(Prev_title , Prev_description);
 
@@ -43,7 +46,7 @@ upd_button.addEventListener("click", () => {
     // console.log(editForm)
     editForm.innerHTML = `<div class=" mt-2 min-h-25 flex items-center justify-between w-95/100 text-white   
                 rounded-2xl p-4 bg-[#009578]/80">
-                <input id="title-text" value="${Prev_title}" name="title"
+                <input id="title-text" value="${Prev_title.innerText.trim()}" name="title"
                     class="font-bold block text-shadow-black text-shadow-2xs text-left text-[2.5rem] leading-[1.2]"/> 
                     
                 <div class="flex flex-row justify-between max-w-150">
@@ -53,7 +56,7 @@ upd_button.addEventListener("click", () => {
             </div>
             <textarea id="description-text" name="description"
                 class="w-95/100 text-2xl min-h-200 p-6 border border-glass-bg  rounded-[20px] bg-[#9ca3af]/40 ">
-             ${Prev_description.trim()}
+             ${Prev_description.innerText.trim()}
             </textarea>` ;
 
 
@@ -73,14 +76,14 @@ upd_button.addEventListener("click", () => {
         const formData = new FormData(editForm);
         const data = Object.fromEntries(formData);
 
-        let desc = data.description;
+        let desc: string = JSON.stringify(data.description);
 
-        if ((data.title !== Prev_title)){
-            localStorage.removeItem(`${Prev_title}`);
+        if ((data.title !== Prev_title.innerText.trim())) {
+            localStorage.removeItem(`${Prev_title.innerText.trim()}`);
 
         }
-            localStorage.setItem(`${data.title}`, JSON.stringify(`${desc.trim()}`));
-     
+        localStorage.setItem(`${data.title}`, `${desc.trim()}`);
+
 
         let template = document.createElement("div");
         template.setAttribute("class", "w-[75%]  flex flex-col items-center justify-center gap-4 ");
@@ -114,14 +117,16 @@ upd_button.addEventListener("click", () => {
 
 
 dlt_button.addEventListener("click", () => {
-    let Prev_title = document.querySelector("#title-text").innerHTML;
-    let Prev_description = document.querySelector("#description-text").innerHTML;
 
-    if (Prev_title.trim() == "Note Title") {
+    let Prev_title = document.querySelector("#title-text") as HTMLDivElement;
+    let Prev_description = document.querySelector("#description-text");
+
+    let titleText: string = Prev_title?.innerHTML;
+
+    if (titleText == "Note Title") {
         alert("choose the valid note to delete")
     } else {
-
-        console.log(localStorage.removeItem(Prev_title));
+        console.log(localStorage.removeItem(Prev_title?.innerHTML));
         console.log(`note is deleted from the storage`);
     }
 
@@ -131,17 +136,21 @@ dlt_button.addEventListener("click", () => {
 
 const card = document.querySelectorAll("#note-container > div")
 note_container.addEventListener("click", (ev) => {
-    const card = ev.target.closest(".card");
+    const card = (ev.target as HTMLDivElement).closest(".card");
 
-    let h5 = card.querySelector("h5");
-    let p = card.querySelector("p");
+    if(!card){
+        return;
+    }
+
+    let h5 = card.querySelector("h5") as HTMLElement;
+    let p = card.querySelector("p") as HTMLElement;
 
     let title = h5.innerHTML;
     let description = p.innerHTML;
     // console.log(description)
 
-    let Prev_title = document.querySelector("#title-text");
-    let Prev_description = document.querySelector("#description-text");
+    let Prev_title = document.querySelector("#title-text") as HTMLDivElement;
+    let Prev_description = document.querySelector("#description-text") as HTMLDivElement;
 
     Prev_title.innerHTML = title;
     Prev_description.innerHTML = JSON.parse(description);
