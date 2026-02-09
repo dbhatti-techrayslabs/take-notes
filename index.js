@@ -22,6 +22,8 @@ const updateList = () => {
     }
 }
 
+updateList();
+
 
 upd_button.addEventListener("click", () => {
 
@@ -34,7 +36,7 @@ upd_button.addEventListener("click", () => {
     let editForm = document.createElement("form");
     editForm.setAttribute("class", "w-[75%]  flex flex-col items-center justify-center gap-4 ")
     editForm.setAttribute("id", "upd-form");
-    console.log(editForm)
+    // console.log(editForm)
 
     editForm.innerHTML = `<div class=" mt-2 min-h-25 flex items-center justify-between w-95/100 text-white   
                 rounded-2xl p-4 bg-[#009578]/80">
@@ -119,9 +121,9 @@ dlt_button.addEventListener("click", () => {
     }
 })
 
-note_container.innerHTML = '';
-let key = localStorage.key(0);
-let value = localStorage.getItem(key);
+// note_container.innerHTML = '';
+// let key = localStorage.key(0);
+// let value = localStorage.getItem(key);
 
 
 
@@ -129,18 +131,18 @@ let value = localStorage.getItem(key);
 
 
 
-for (let i = 0; i < localStorage.length; i++) {
-    let title = localStorage.key(i);
-    let description = localStorage.getItem(title);
+// for (let i = 0; i < localStorage.length; i++) {
+//     let title = localStorage.key(i);
+//     let description = localStorage.getItem(title);
 
-    let nList = document.createElement("div");
-    nList.setAttribute("class", " card line-clamp-4 w-95/100 hover:shadow-black/20 hover:shadow-[0px_10px_30px] hover:translate-x-2.5 hover:bg-[rgba(118,169,250,0.1)] duration-300 ease-out p-6 border border-glass-bg border-l-4 border-l-accent-blue rounded-[20px] bg-[#9ca3af]/40 ")
-    nList.innerHTML = ` <h5 class="mb-2 text-[1.2rem] font-bold ">${title}</h5>
-                        <p class="text-[0.95rem] text-black">${description}
-                        </p>`;
+//     let nList = document.createElement("div");
+//     nList.setAttribute("class", " card line-clamp-4 w-95/100 hover:shadow-black/20 hover:shadow-[0px_10px_30px] hover:translate-x-2.5 hover:bg-[rgba(118,169,250,0.1)] duration-300 ease-out p-6 border border-glass-bg border-l-4 border-l-accent-blue rounded-[20px] bg-[#9ca3af]/40 ")
+//     nList.innerHTML = ` <h5 class="mb-2 text-[1.2rem] font-bold ">${title}</h5>
+//                         <p class="text-[0.95rem] text-black">${description}
+//                         </p>`;
 
-    note_container.appendChild(nList);
-}
+//     note_container.appendChild(nList);
+// }
 
 
 
@@ -156,21 +158,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     updateList();
-
-    // for (let i = 0; i < localStorage.length; i++) {
-    //     let title = localStorage.key(i);
-    //     let description = localStorage.getItem(title);
-
-    //     let nList = document.createElement("div");
-    //     nList.setAttribute("class", " card line-clamp-4 w-95/100 hover:shadow-black/20 hover:shadow-[0px_10px_30px] hover:translate-x-2.5 hover:bg-[rgba(118,169,250,0.1)] duration-300 ease-out p-6 border border-glass-bg border-l-4 border-l-accent-blue rounded-[20px] bg-[#9ca3af]/40 ")
-    //     nList.innerHTML = ` <h5 class="mb-2 text-[1.2rem] font-bold ">${title}</h5>
-    //                     <p class="text-[0.95rem] text-black">${description}
-    //                     </p>`;
-
-    //     nList.setAttribute("id", "card")
-
-    //     note_container.appendChild(nList)
-    // }
 })
 
 
