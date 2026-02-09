@@ -1,15 +1,24 @@
 const add_note = document.querySelector("#add-note");
 const note_preview_content = document.querySelector("#note-preview-content");
-const form = document.querySelector("form");
 const note_container = document.querySelector("#note-container");
 const dlt_button = document.querySelector("#dlt-btn");
 const upd_button = document.querySelector("#upd-btn");
 
-upd_button.addEventListener("click" , ()=>{
+upd_button.addEventListener("click", () => {
 
-            
+    let Prev_title = document.querySelector("#title-text").innerHTML;
+    let Prev_description = document.querySelector("#description-text").innerHTML;
+
+    // console.log(Prev_title , Prev_description);
+
+    
+
+
+
+
+
+
 })
-
 
 
 dlt_button.addEventListener("click", () => {
@@ -23,7 +32,7 @@ dlt_button.addEventListener("click", () => {
     } else {
 
         console.log(localStorage.removeItem(Prev_title));
-        console.log(`note is deleted from the storage`);  
+        console.log(`note is deleted from the storage`);
     }
 })
 

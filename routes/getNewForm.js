@@ -17,7 +17,6 @@ form.addEventListener("submit", (e) => {
 
     localStorage.setItem(`${data.title}`,JSON.stringify(`${data.description}`));
 
-
     window.location.href = `${window.location.origin}/index.html`;
 
 
